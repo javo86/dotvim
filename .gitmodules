@@ -31,3 +31,6 @@
 [submodule "bundle/taglisttoo"]
 	path = bundle/taglisttoo
 	url = https://github.com/ervandew/taglisttoo.git
+[submodule "bundle/zencoding"]
+	path = bundle/zencoding
+	url = https://github.com/mattn/zencoding-vim.git
