@@ -28,3 +28,6 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/taglisttoo"]
+	path = bundle/taglisttoo
+	url = https://github.com/ervandew/taglisttoo.git
