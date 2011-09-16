@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8">
+	</head>
+	<body>
+		<div id="main-container">
+			<p>Hola mundo!</p>
+		</div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+		<script src="master.js" type="text/javascript"></script>
+	</body>
+</html>
