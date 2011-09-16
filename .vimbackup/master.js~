@@ -1,7 +1,0 @@
-window.onload = function(){
-	alert("YEI");
-}
-
-//$('document').ready(function(){
-	//alert("YEI");
-//});
