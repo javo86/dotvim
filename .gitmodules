@@ -40,3 +40,6 @@
 [submodule "bundle/addon-mw-utils"]
 	path = bundle/addon-mw-utils
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "snipmate-snippets"]
+	path = snipmate-snippets
+	url = https://github.com/honza/snipmate-snippets.git
