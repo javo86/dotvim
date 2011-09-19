@@ -1,20 +1,16 @@
-" Notes 
-" {
+" Notes  {
     "vim: set foldmarker={,} foldlevel=0 foldmethod=marker spell:
     "Javo's vimrc, based on Steve Francia's vimrc.
 	"Steve Francia's site http://spf13.com
 " }
 
-" Environment 
-" {
-	" Basics 
-	" {
+" Environment  {
+	" Basics {
 		set nocompatible 		"must be first line
 		filetype off 
 	" }
 
-	" Setup Bundle Support 
-	" {
+	" Setup Bundle Support {
 		" The next two lines ensure that the ~/.vim/bundle/ system works
 		runtime! autoload/pathogen.vim
 		silent! call pathogen#helptags()
@@ -23,8 +19,7 @@
 		syntax on 						"syntax highlighting
 	" }
 
-	" Behaivor 
-	" {
+	" Behaivor  {
 		"backspace for dummys
 		set backspace=indent,eol,start	
 		"Line numbers on
@@ -35,8 +30,7 @@
 		set scrolloff=3 				
 	" }
 
-	" Misc
-	" {
+	" Misc {
 		"only show 15 tabs
 		set tabpagemax=15		
 		"display the current mode
@@ -73,10 +67,13 @@
 		"spell checking on
 		"set spell 		 	        	
 		set hidden
+			"make vim save view (state) (folds, cursor, etc)
+		au BufWinLeave * silent! mkview   
+		"make vim load view (state) (folds, cursor, etc)
+		au BufWinEnter * silent! loadview 
 	" }
 
-	" Setting up the directories 
-	" {
+	" Setting up the directories  {
 		" Backup specific dir
 		set backupdir=$HOME/.vim/.vimbackup/ 
 		" Same for undo files
@@ -85,14 +82,9 @@
 		set directory=$HOME/.vim/.vimswap/ 	
 		" same for view files
 		set viewdir=$HOME/.vim/.vimviews/ 	
-			"make vim save view (state) (folds, cursor, etc)
-		au BufWinLeave * silent! mkview   
-		"make vim load view (state) (folds, cursor, etc)
-		au BufWinEnter * silent! loadview 
 	" }
 
-	" omnicomplete
-	" {
+	" omnicomplete {
 		au FileType python set omnifunc=pythoncomplete#Complete
 		au FileType php set omnifunc=phpcomplete#CompletePHP
 		au FileType javascript set omnifunc=javascriptcomplete#CompleteJS
@@ -100,12 +92,10 @@
 		au FileType css set omnifunc=csscomplete#CompleteCSS
 		au FileType xml set omnifunc=xmlcomplete#CompleteTags
 	" }
-	" }
+" }
 
-" General 
-" {
-	" Search & replace settings 
-	" {
+" General  {
+	" Search & replace settings  {
 		"makes search regexes behave normally (a la python,perl)
 		nnoremap / /\v
 		vnoremap / /\v
@@ -120,10 +110,8 @@
 	" }
 " }
 
-" [G]Vim [G]UI 
-" {
-	" Appearance 
-	" {
+" User Interface  {
+	" Appearance  {
 		"GUI
 		if has("gui_running")
 			set go-=T
@@ -141,10 +129,11 @@
 		set cursorline  		
 		"highlight bg color of current line
 		hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+		" Colored column (to see line size violations)
+		set colorcolumn=80
 	" }
 
-	" ruler and command settings 
-	" {
+	" ruler and command settings  {
 		if has('cmdline_info')
 			set ruler                  	"show the ruler
 			set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) "a ruler on steroids
@@ -153,8 +142,7 @@
 		endif
 	" }
 
-	" status line settings
-	" {
+	" status line settings {
 		if ! has('statusline')
 			set laststatus=2
 			"Broken down into easily includeable segments
@@ -168,14 +156,12 @@
 		endif
 	" }
 
-	" Menu display settings
-	" {
+	" Menu display settings {
 		set wildmenu					"show list instead of just completing
 		set wildmode=list:longest,full	"comand <Tab> completion, list matches, then longest common part, then all.
 	" }
 
-	" Layout Settings 
-	" {
+	" Layout Settings  {
 		"No extra spaces between rows
 		set linespace=0					
 		"windows can be 0 line high 
@@ -183,16 +169,13 @@
 	" }
 " }
 
-" Formatting 
-" {
-	" Wrap settings
-	" {
+" Formatting  {
+	" Wrap settings {
 		set whichwrap=b,s,h,l,<,>,[,]	"backspace and cursor keys wrap to
 		set nowrap                     	" wrap long lines
 	" }
 
-	" Indent settings
-	" {
+	" Indent settings {
 		set autoindent                 	" indent at the same level of the previous line
 		set shiftwidth=4               	" use indents of 4 spaces
 		set noexpandtab 	       		" tabs are tabs, not spaces
@@ -200,10 +183,8 @@
 	" }
 " }
 
-" Key Mappings 
-" {
-	" Misc
-	" {
+" Key Mappings  {
+	" Misc {
 		"change map leader (default \)
 		let mapleader = 'm'
 		"Pasar a ex mode
@@ -217,10 +198,14 @@
 		" visual shifting (does not exit Visual mode)
 		vnoremap < <gv
 		vnoremap > >gv 
+		" Wrapped lines goes down/up to next row, rather than next line in
+		" file.
+		nnoremap j gj
+		nnoremap k gk
+
 	" }
 
-	" File Operations
-	" {
+	" File Operations {
 		" Save, quit, etc
 		nnoremap <silent>,w :w <cr>
 		nnoremap <silent>,q :q <cr>
@@ -228,8 +213,7 @@
 		nnoremap <silent>,wqa :q <cr>
 	" }
 
-	" Windows an tabs movement
-	" {
+	" Windows an tabs movement {
 		"Mapping para que alt funcione en vim
 		if has("gui_running")
 			nnoremap <A-h> :wincmd h<cr> 
@@ -246,16 +230,14 @@
 		map <S-L> gt
 	" }
 
-	" windows and tabs layout & creation 
-	" {
+	" windows and tabs layout & creation  {
 		nnoremap <silent><leader>s :split <cr>
 		nnoremap <silent><leader>vs :vsplit <cr>
 		" create tabs
 		nnoremap <silent>tn :tabnew <cr>
 	" }
 
-	" Shift key fixes
-	" {
+	" Shift key fixes {
 		cmap W w
 		cmap WQ wq
 		cmap wQ wq
@@ -263,8 +245,7 @@
 		cmap Tabe tabe
 	" }
 
-	" Shortcuts
-	" {
+	" Shortcuts {
 		" Change Working Directory to that of the current file
 		cmap cwd lcd %:p:h <cr>
 		cmap cd. lcd %:p:h <cr>
@@ -286,13 +267,14 @@
 	" }
 " }
 
-" Plugins Sections
-" {
-	" NERD Tree
-	" {
+" Tags Section {
+    "nmap <silent><leader>z
+" }
 
-		" Key mappings
-		" {
+" Plugins Sections {
+"
+	" NERD Tree {
+		" Key mappings {
 			nnoremap <silent>,t :NERDTreeToggle<CR>
 			map <leader>e :NERDTreeFind<CR>
 			nnoremap <silent><leader>nt :NERDTree 
@@ -309,39 +291,30 @@
 		" }
 	" }
 
-	" NERD Commenter
-	" {
+	" NERD Commenter {
 	" }
 
-	" Ctags 
-	" {
-		" Options
-		" {
+	" Ctags {
+		" Options {
 			set tags=./tags;/,~/.vimtags
 		" }
 	" }
 
-	" Command-T
-	" {
-		"Key mappings
-		" {
+	" Command-T {
+		"Key mappings {
 			nnoremap <silent><leader>t :CommandT<cr>
 			nnoremap <silent><leader>tf :CommandTFlush<cr>
 		" }
 	" }
 
-	" Zencoding
-	" {
-		" Options
-		" {
+	" Zencoding {
+		" Options {
 			let g:uset_zen_leader_key = ","
 		" }
 	" }
 
-	" Tag list Too
-	" {
-		" Options
-		" {
+	" Tag list Too {
+		" Options {
 			"let Tlist_Ctags_Cmd =
 			let Tlist_Auto_Open = 0
 			let Tlist_WinWidth = 30
@@ -350,16 +323,13 @@
 			let TaglistTooPosition = 0
 		" }
 
-		" Key mappings
-		" {
+		" Key mappings {
 			nnoremap <silent>,l :TlistToo<cr>
 		" }
 	" }
 
-	" Fugitive
-	" {
-		" Mappings
-		" {
+	" Fugitive {
+		" Mappings {
 			nnoremap <silent><leader>gs :Gstatus<cr>
 			nnoremap <silent><leader>gl :Glog<cr>
 			nnoremap <silent><leader>gll :Git reflog<cr>  
@@ -376,19 +346,15 @@
 		" }
 	" }
 
-	" Easy-Motion
-	" {
-		" Options
-		" {
+	" Easy-Motion {
+		" Options {
 			let g:EasyMotion_mapping_t  = '\t'
 		" }
 	" }
 " }
 
-" Functions 
-" {
-	"Move current tab to left
-	" {
+" Functions  {
+	"Move current tab to left {
 		function! MyTabLeft()
 		   let tab_number = tabpagenr() - 1
 		   if tab_number == 0
@@ -400,8 +366,7 @@
 		nnoremap <silent><S-n> :execute MyTabLeft()<cr>
 	" }
 
-	"Move current tab to right
-	" {
+	"Move current tab to right {
 		function! MyTabRight()
 		   let tab_number = tabpagenr() - 1
 		   let last_tab_number = tabpagenr('$') - 1
@@ -413,5 +378,4 @@
 		endfunction
 		nnoremap <silent><S-m> :execute MyTabRight()<cr>
 	" }
-
 " }
