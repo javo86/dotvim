@@ -49,3 +49,6 @@
 [submodule "bundle/colors-jellybeans"]
 	path = bundle/colors-jellybeans
 	url = https://github.com/nanotech/jellybeans.vim.git
+[submodule "bundle/neocomplcache"]
+	path = bundle/neocomplcache
+	url = https://github.com/Shougo/neocomplcache.git
