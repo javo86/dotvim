@@ -43,3 +43,6 @@
 [submodule "snipmate-snippets"]
 	path = snipmate-snippets
 	url = https://github.com/honza/snipmate-snippets.git
+[submodule "bundle/colors-solarized"]
+	path = bundle/colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
