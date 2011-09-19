@@ -46,3 +46,6 @@
 [submodule "bundle/colors-solarized"]
 	path = bundle/colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/colors-jellybeans"]
+	path = bundle/colors-jellybeans
+	url = https://github.com/nanotech/jellybeans.vim.git
