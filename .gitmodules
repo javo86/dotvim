@@ -61,3 +61,6 @@
 [submodule "bundle/colors-collec2"]
 	path = bundle/colors-collec2
 	url = https://github.com/vim-scripts/Color-Sampler-Pack.git
+[submodule "bundle/autocomplpop"]
+	path = bundle/autocomplpop
+	url = https://github.com/vim-scripts/AutoComplPop.git
