@@ -55,3 +55,6 @@
 [submodule "bundle/vimshell"]
 	path = bundle/vimshell
 	url = https://github.com/Shougo/vimshell.git
+[submodule "bundle/colors-collec1"]
+	path = bundle/colors-collec1
+	url = https://github.com/mgutz/vim-colors.git
