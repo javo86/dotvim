@@ -64,3 +64,6 @@
 [submodule "bundle/autocomplpop"]
 	path = bundle/autocomplpop
 	url = https://github.com/vim-scripts/AutoComplPop.git
+[submodule "bundle/jsbeautify"]
+	path = bundle/jsbeautify
+	url = https://github.com/vim-scripts/jsbeautify.git
