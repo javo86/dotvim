@@ -70,3 +70,30 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "pyflakes-vim"]
+	path = pyflakes-vim
+	url = https://github.com/kevinw/pyflakes-vim.git
+[submodule "bundle/task-org"]
+	path = bundle/task-org
+	url = https://github.com/iflo0/vim-task-org.git
+[submodule "bundle/todo"]
+	path = bundle/todo
+	url = https://github.com/mivok/vimtodo.git
+[submodule "bundle/todolist"]
+	path = bundle/todolist
+	url = https://github.com/vim-scripts/todolist.vim.git
+[submodule "bundle/syntax-javascript"]
+	path = bundle/syntax-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "bundle/tskeleton"]
+	path = bundle/tskeleton
+	url = https://github.com/tomtom/tskeleton_vim.git
+[submodule "bundle/pytest"]
+	path = bundle/pytest
+	url = https://github.com/alfredodeza/pytest.vim.git
+[submodule "bundle/mu-template"]
+	path = bundle/mu-template
+	url = https://github.com/vim-scripts/mu-template.git
