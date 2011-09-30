@@ -1,0 +1,255 @@
+"Plugin Mappings {
+
+  "Frequently Used {
+
+    "Ack {
+      n  ma          * :Ack<Space>
+    " }
+
+    "CommandT {
+      n  mb            :CommandTBuffer<CR>
+      n  mt            :CommandT<CR>
+    " }
+
+    "Task-Org {
+      n  ,jt         * :Jt<CR>
+      n  ,vt         * :Vt<CR>
+      n  ,ti         * :Ti<CR>
+    " }
+
+    "ZenCoding {
+      n  ,N            <Plug>ZenCodingPrev
+      n  ,n            <Plug>ZenCodingNext
+      n  ,;            <Plug>ZenCodingExpandWord
+      n  ,,            <Plug>ZenCodingExpandNormal
+      v  ,,            <Plug>ZenCodingExpandVisual
+    " }
+
+    " NERDTree {
+      n  ,ntb        * :NERDTreeFromBookmark<Space>
+      n  ,nt         * :NERDTree<Space>
+      n  ,to         * :NERDTreeToggle<CR>
+    " }
+
+    " TagBar {
+      n  ,tb         * :TagbarOpenAutoClose<CR>
+    " }
+
+    " EasyMotion {
+      v  \f          * :<C-U>call EasyMotionF(1, 0)<CR>
+      o  \f          * :call EasyMotionF(0, 0)<CR>
+      n  \f          * :call EasyMotionF(0, 0)<CR>
+      v  \t          * :<C-U>call EasyMotionT(1, 0)<CR>
+      o  \t          * :call EasyMotionT(0, 0)<CR>
+      n  \t          * :call EasyMotionT(0, 0)<CR>
+      v  \b          * :<C-U>call EasyMotionWB(1, 1)<CR>
+      o  \b          * :call EasyMotionWB(0, 1)<CR>
+      n  \b          * :call EasyMotionWB(0, 1)<CR>
+      v  mj          * :<C-U>call EasyMotionJK(1, 0)<CR>
+      o  mj          * :call EasyMotionJK(0, 0)<CR>
+      n  mj          * :call EasyMotionJK(0, 0)<CR>
+      v  mw          * :<C-U>call EasyMotionWB(1, 0)<CR>
+      o  mw          * :call EasyMotionWB(0, 0)<CR>
+      n  mw          * :call EasyMotionWB(0, 0)<CR>
+      v  mF          * :<C-U>call EasyMotionF(1, 1)<CR>
+      o  mF          * :call EasyMotionF(0, 1)<CR>
+      n  mF          * :call EasyMotionF(0, 1)<CR>
+      v  mk          * :<C-U>call EasyMotionJK(1, 1)<CR>
+      o  mk          * :call EasyMotionJK(0, 1)<CR>
+      n  mk          * :call EasyMotionJK(0, 1)<CR>
+    " }
+
+    " NERDCommenter {
+      v  mcu           <Plug>NERDCommenterUncomment
+      n  mcu           <Plug>NERDCommenterUncomment
+      v  mcs           <Plug>NERDCommenterSexy
+      n  mcs           <Plug>NERDCommenterSexy
+      v  mcc           <Plug>NERDCommenterComment
+      n  mcc           <Plug>NERDCommenterComment
+    " }
+
+    " Surround {
+      n  ySS           <Plug>YSsurround
+      n  ySs           <Plug>YSsurround
+      n  yss           <Plug>Yssurround
+      n  yS            <Plug>YSurround
+      n  ys            <Plug>Ysurround
+      n  cs            <Plug>Csurround
+      n  ds            <Plug>Dsurround
+    " }
+
+    " Fugitive {
+      n  mgi         * :Git
+      n  mgdd        * :Gdiff
+      n  mgd         * :Gdiff<CR>
+      n  mgm         * :Git merge
+      n  mgk         * :Git checkout
+      n  mgb         * :Git checkout -b
+      n  mgbl        * :Git branch<CR>
+      n  mgc         * :Gcommit<CR>
+      n  mgr         * :Gread
+      n  mgw         * :Gwrite<CR>
+      n  mgll        * :Git reflog<CR>
+      n  mgl         * :Glog<CR>
+      n  mgs         * :Gstatus<CR>
+    " }
+
+  " }
+
+  "Rarely Used {
+
+    "ZenCoding {
+      n  ,A            <Plug>ZenCodingAnchorizeSummary
+      n  ,a            <Plug>ZenCodingAnchorizeURL
+      n  ,k            <Plug>ZenCodingRemoveTag
+      n  ,j            <Plug>ZenCodingSplitJoinTagNormal
+      n  ,/            <Plug>ZenCodingToggleComment
+      n  ,i            <Plug>ZenCodingImageSize
+      v  ,D            <Plug>ZenCodingBalanceTagOutwardVisual
+      n  ,D            <Plug>ZenCodingBalanceTagOutwardNormal
+      v  ,d            <Plug>ZenCodingBalanceTagInwardVisual
+      n  ,d            <Plug>ZenCodingBalanceTagInwardNormal
+   " }
+
+   "Fugitive {
+   " }
+
+   "Surround {
+   " }
+
+   "NERDCommenter {
+      n  mca           <Plug>NERDCommenterAltDelims
+      v  mcA           <Plug>NERDCommenterAppend
+      n  mcA           <Plug>NERDCommenterAppend
+      v  mc$           <Plug>NERDCommenterToEOL
+      n  mc$           <Plug>NERDCommenterToEOL
+      v  mcn           <Plug>NERDCommenterNest
+      n  mcn           <Plug>NERDCommenterNest
+      v  mcb           <Plug>NERDCommenterAlignBoth
+      n  mcb           <Plug>NERDCommenterAlignBoth
+      v  mcl           <Plug>NERDCommenterAlignLeft
+      n  mcl           <Plug>NERDCommenterAlignLeft
+      v  mcy           <Plug>NERDCommenterYank
+      n  mcy           <Plug>NERDCommenterYank
+      v  mci           <Plug>NERDCommenterInvert
+      n  mci           <Plug>NERDCommenterInvert
+      v  mcm           <Plug>NERDCommenterMinimal
+      n  mcm           <Plug>NERDCommenterMinimal
+      v  mc<Space>     <Plug>NERDCommenterToggle
+      n  mc<Space>     <Plug>NERDCommenterToggle
+   " }
+
+   "NERDTree {
+      n  ,e            :NERDTreeFind<CR>
+   " }
+
+   "Ack {
+   " }
+
+   "EasyMotion {
+      v  me          * :<C-U>call EasyMotionE(1, 0)<CR>
+      o  me          * :call EasyMotionE(0, 0)<CR>
+      n  me          * :call EasyMotionE(0, 0)<CR>
+      v  mE          * :<C-U>call EasyMotionEW(1, 0)<CR>
+      o  mE          * :call EasyMotionEW(0, 0)<CR>
+      n  mE          * :call EasyMotionEW(0, 0)<CR>
+      v  mT          * :<C-U>call EasyMotionT(1, 1)<CR>
+      o  mT          * :call EasyMotionT(0, 1)<CR>
+      n  mT          * :call EasyMotionT(0, 1)<CR>
+      v  mge         * :<C-U>call EasyMotionE(1, 1)<CR>
+      o  mge         * :call EasyMotionE(0, 1)<CR>
+      n  mge         * :call EasyMotionE(0, 1)<CR>
+      v  mgE         * :<C-U>call EasyMotionEW(1, 1)<CR>
+      o  mgE         * :call EasyMotionEW(0, 1)<CR>
+      n  mgE         * :call EasyMotionEW(0, 1)<CR>
+      v  mB          * :<C-U>call EasyMotionWBW(1, 1)<CR>
+      o  mB          * :call EasyMotionWBW(0, 1)<CR>
+      n  mB          * :call EasyMotionWBW(0, 1)<CR>
+      v  mW          * :<C-U>call EasyMotionWBW(1, 0)<CR>
+      o  mW          * :call EasyMotionWBW(0, 0)<CR>
+      n  mW          * :call EasyMotionWBW(0, 0)<CR>
+   " }
+
+   "Task-Org {
+   " }
+
+   "TagBar {
+   " }
+
+   "CommandT {
+   " }
+
+  " }
+
+" }
+
+"Other Mappings {
+
+  "Frequently Used {
+
+   "Movement {
+     n  j           * gj
+     n  k           * gk
+   " }
+
+    "Window movement & Operations {
+      n  <C-H>       * :wincmd h<CR>
+      n  <NL>        * :wincmd j<CR>
+      n  <C-K>       * :wincmd k<CR>
+      n  <C-L>       * :wincmd l<CR>
+      n  mvs         * :vsplit <CR>
+      n  ms          * :split <CR>
+    " }
+
+    "Tab movement & Operations {
+      n  H           gT "Estaba como map, hay que eliminar ese mapping
+      n  L           gt "Estaba como map, hay que eliminar ese mapping
+      n  tn          * :tabnew <CR>
+    " }
+
+    "File Operations {
+      n  ,wqa        * :wqa <CR>
+      n  ,wq         * :wq <CR>
+      n  ,q          * :q <CR>
+      n  ,w          * :w <CR>
+    " }
+
+    "Functions {
+      n  M           * :execute MyTabRight()<CR>
+      n  N           * :execute MyTabLeft()<CR>
+    " }
+
+    "Misc {
+      n  Y           * y$
+      n  <Space>     * :
+      v  /           * /\v
+      n  /           * /\v
+      v  <           * <gv
+      v  >           * >gv
+      n  mL          * :nohls<CR>
+    " }
+
+  " }
+
+  "Rarely Used {
+
+    "Misc {
+      n  mdab          :bufdo silent! bdelete<CR> "Estaba como map, falta darle unclear
+      n  \9          * :noh<CR>
+      n  gV          * `[v`]`"
+      n  mY          * "*y
+      n  my          * "+y
+      n  mfa         * 1G=G''
+      n  ,y3         * "3y
+      n  ,y2         * "2y
+      n  ,y1         * "1y
+      n  mp3         * "1p
+      n  mp2         * "1p
+      n  mp1         * "1p
+      n  m1          * :!clear<CR>
+    " }
+
+  " }
+
+" }
+

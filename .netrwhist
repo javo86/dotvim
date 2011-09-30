@@ -1,0 +1,4 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/home/javo/workspace/public_html/symfony/v2.0/tut1/www/src/Javo/Test1Bundle/Controller'
+let g:netrw_dirhist_2='/home/javo/self_study/python/lists'
